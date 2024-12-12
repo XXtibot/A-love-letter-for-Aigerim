@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9c5c8; 
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#telegram {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  background: #f9c5c8;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+#seal {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 12px;
+  background: #ff7f7f;
+  border-radius: 50%;
+}
+
+#flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: #ff7f7f;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transition: all 1s ease;
+}
+
+#paper {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: white;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+#message {
+  font-size: 24px;
+  color: #ff4d88;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+button {
+  background-color: #ff7f7f;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4d4d;
+}
